@@ -1,0 +1,11 @@
+https://hub.docker.com/_/eclipse-mosquitto
+
+docker run -it -p 1883:1883 -p 9001:9001 --name mosquitto -v mosquitto.conf:/mosquitto/config/mosquitto.conf -v /mosquitto/data -v /mosquitto/log eclipse-mosquitto
+
+create /mosquitto/config/, /mosquitto/data/, /mosquitto/log/ dirs on your host machine
+put mosquitto.config in /mosquitto/config/. Don't forget about those options in config:
+persistence true
+persistence_location /mosquitto/data/
+log_dest file /mosquitto/log/mosquitto.log
+
+sudo docker run -it -p 11883:1883 -p 9001:9001 -v /mosquitto/:/mosquitto/ eclipse-mosquitto

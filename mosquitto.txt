@@ -1,0 +1,6 @@
+/Users/admin/homebrew/sbin/mosquitto -c /Users/admin/homebrew/etc/mosquitto/mosquitto.conf
+brew services start mosquitto
+
+/Users/admin/homebrew/bin/mosquitto_sub -t paul/temp
+
+/Users/admin/homebrew/bin/mosquitto_pub -t paul/temp -m "23C"
