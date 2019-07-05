@@ -52,4 +52,10 @@ executable file name is pubtots which is in pubtots/out
 chmod +x pubtots
 
 
+to auto power on gsm hat
+install gsm hat on gpio
+to switch on gsm hat execute 
+
+python GSM_PWRKEY.py 7
+port will be on /dev/ttyS0 or similar 
 
