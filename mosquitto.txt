@@ -1,6 +1,11 @@
-/Users/admin/homebrew/sbin/mosquitto -c /Users/admin/homebrew/etc/mosquitto/mosquitto.conf
+mosquitto -c mosquitto.conf
+sudo mosquitto_passwd -c /mosquitto/passwd paul
+
 brew services start mosquitto
 
+
 /Users/admin/homebrew/bin/mosquitto_sub -t paul/temp
+
+sudo mosquitto_pub -h localhost -p 1883 -t paul/test -m "f" -u "paul" -P "123456"
 
 /Users/admin/homebrew/bin/mosquitto_pub -t paul/temp -m "23C"

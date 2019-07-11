@@ -648,8 +648,8 @@ log_dest file /mosquitto/log/mosquitto.log
 # username/password or TLS-PSK checks, then `allow_anonymous` defaults to
 # false.
 #
-#allow_anonymous true
-
+allow_anonymous false 
+password_file /mosquitto/passwd
 # -----------------------------------------------------------------
 # Default authentication and topic access control
 # -----------------------------------------------------------------
